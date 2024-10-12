@@ -9,8 +9,8 @@ export default {
         "back-2": "#212C34",
         "back-3": "#3A4C5B",
         "border-g": "#6F6F6F",
-        "text-1": "#ACACAC",
-        "text-2": "#59B5BC"
+        "col-1": "#ACACAC",
+        "col-2": "#59B5BC"
       },
       fontFamily: {
         "Varien": ["Varien"],
