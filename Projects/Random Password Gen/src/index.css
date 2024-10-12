@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Varien;
+  src: url("./assets/fonts/varien.regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: NewType;
+  src: url("./assets/fonts/Newtype.otf") format("otf");
+}
+
+.heading_texts {
+  @apply text-white text-3xl font-Varien;
+}
