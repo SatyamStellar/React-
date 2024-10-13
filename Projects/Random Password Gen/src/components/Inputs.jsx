@@ -7,7 +7,7 @@ const Inputs = () => {
         <div className="w-full flex items-center justify-center">
           <input
             type="text"
-            className="bg-back-2 rounded-md w-[70%] p-4 px-4 placeholder:font-Varien text-xl text-center "
+            className="bg-back-2 rounded-lg w-[70%] p-4 px-4 placeholder:font-Varien text-xl text-center "
             placeholder="Your Password"
             name=""
             id=""
@@ -67,13 +67,48 @@ const Inputs = () => {
             <label htmlFor="SYM__checkbox">ABC</label>
           </div>
         </div>
-        <div className="mt-14 w-full justify-center flex flex-col items-center gap-2">
-          <h2 className="heading_texts">Select Your Platform</h2>
-          <select name="fruits" id="fruits">
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="date">Date</option>
-          </select>
+        <div className="mt-4 w-full">
+          <div className="mt-14 w-full justify-center flex flex-col items-center gap-2">
+            <h2 className="heading_texts">Select Your Platform</h2>
+            <select
+              name="Platforms"
+              id="platforms"
+              className="w-[60%] p-3 text-center text-white font-Varien bg-back-1 outline-none border border-zinc-200 rounded-lg "
+            >
+              <option value="gmail">Gmail</option>
+
+              <option value="insta">Istagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="reddit">Reddit</option>
+              <option value="outlook">Outlook</option>
+            </select>
+            <div className="w-full hidden items-center justify-center mt-2 ">
+              <input
+                type="text"
+                className="bg-back-2 rounded-lg w-[70%] p-4 px-4 placeholder:font-Varien text-xl text-center "
+                placeholder="Enter your Platform"
+                name=""
+                id=""
+              />
+            </div>
+          </div>
+          <div
+            className="w-full mt-8 flex flex-col justify-center items-center
+          "
+          >
+            <h2 className="heading_texts">UserId/E-Mail</h2>
+            <input
+              type="text"
+              className="w-[60%] mt-4 p-3 text-sm text-center text-white font-Varien bg-back-1 outline-none border border-zinc-200 rounded-lg "
+              placeholder="Your Id"
+              name=""
+            />
+          </div>
+          <div className="w-full items-center flex justify-center mt-8">
+            <button className="bg-back-2 rounded-lg w-[60%] p-4 px-4 placeholder:font-Varien text-xl text-center heading_texts  ">
+              Generate
+            </button>
+          </div>
         </div>
       </div>
     </>

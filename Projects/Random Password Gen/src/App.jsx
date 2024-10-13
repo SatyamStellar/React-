@@ -10,7 +10,7 @@ const App = () => {
       </h1>
       <div className="w-full h-full flex items-start justify-evenly mt-10">
         <Inputs />
-        <div className="bg-purple-400 w-1/2 opacity-20 h-14">
+        <div className=" w-1/2 h-14">
           <Saved />
           <History />
         </div>
