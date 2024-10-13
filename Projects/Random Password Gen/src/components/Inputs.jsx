@@ -80,7 +80,7 @@ const Inputs = () => {
               <option value="insta">Istagram</option>
               <option value="facebook">Facebook</option>
               <option value="reddit">Reddit</option>
-              <option value="outlook">Outlook</option>
+              <option value="other">Other</option>
             </select>
             <div className="w-full hidden items-center justify-center mt-2 ">
               <input
