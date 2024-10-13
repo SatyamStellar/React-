@@ -16,6 +16,9 @@ export default {
         "Varien": ["Varien"],
         "NewType": ["NewType"]
       },
+      backgroundImage: {
+        'back-img': "url('./src/assets/imgs/check-line.png')",
+      },
     },
   },
   plugins: [],
