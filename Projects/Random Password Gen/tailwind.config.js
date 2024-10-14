@@ -14,7 +14,8 @@ export default {
       },
       fontFamily: {
         "Varien": ["Varien"],
-        "NewType": ["NewType"]
+        "NewType": ["NewType"],
+        "Poppins": ["Poppins"]
       },
       backgroundImage: {
         'back-img': "url('./src/assets/imgs/check-line.png')",

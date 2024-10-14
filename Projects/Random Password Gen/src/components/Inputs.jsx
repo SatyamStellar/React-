@@ -5,15 +5,11 @@ const Inputs = () => {
     <>
       <div className="w-1/2 m-6 flex items-center flex-col justify-center h-auto relative">
         <div className="w-full flex items-center justify-center">
-          <input
-            type="text"
-            className="bg-back-2 rounded-lg w-[70%] p-4 px-4 placeholder:font-Varien text-xl text-center "
-            placeholder="Your Password"
-            name=""
-            id=""
-          />
+          <h3 className="bg-back-2 rounded-lg w-[70%] p-4 px-4 text-white opacity-40 font-Varien text-xl text-center pointer-events-none ">
+            Your Password
+          </h3>
         </div>
-        <div className="mt-4 text-2xl font-Varien flex flex-row gap-[50%] gap-y-4 flex-wrap  w-[60%] text-col-1">
+        <div className="mt-4 text-2xl font-Poppins flex flex-row gap-[50%] gap-y-4 flex-wrap  w-[60%] text-col-1">
           <div className="flex items-center justify-center gap-3">
             <input
               type="checkbox"
@@ -38,7 +34,7 @@ const Inputs = () => {
                 backgroundPosition: "center",
               }}
             />
-            <label htmlFor="abc__checkbox">ABC</label>
+            <label htmlFor="abc__checkbox">abc</label>
           </div>
           <div className="flex items-center justify-center gap-3">
             <input
@@ -51,9 +47,9 @@ const Inputs = () => {
                 backgroundPosition: "center",
               }}
             />
-            <label htmlFor="123__checkbox">ABC</label>
+            <label htmlFor="123__checkbox">123</label>
           </div>
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3 ml-3">
             <input
               type="checkbox"
               id="SYM__checkbox"
@@ -64,7 +60,7 @@ const Inputs = () => {
                 backgroundPosition: "center",
               }}
             />
-            <label htmlFor="SYM__checkbox">ABC</label>
+            <label htmlFor="SYM__checkbox">@#$</label>
           </div>
         </div>
         <div className="mt-4 w-full">
