@@ -13,10 +13,6 @@
   src: url("./assets/fonts/Newtype.otf") format("otf");
 }
 
-.heading_texts {
-  @apply text-white text-3xl font-Varien;
-}
-
 body::-webkit-scrollbar {
   display: none;
 }
