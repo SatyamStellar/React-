@@ -4,12 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body::-webkit-scrollbar{
+  display: none;
+ }
+
 body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: #dfdff0;
   font-family: "General Sans", sans-serif;
 }
+
+
 
 @layer base {
   @font-face {
