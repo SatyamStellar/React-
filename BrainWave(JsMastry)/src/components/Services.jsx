@@ -64,10 +64,17 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                {/* TODO: start impliment the image. Time:- 2:26 */}
+              </div>
+              <div className="relative bg-n-8 h-[20rem] rounded-xl overflow-hidden md:h-[25rem]">
+                <img src={service3} alt="" className="size-full object-cover"
+                  height={400}
+                  width={520} />
+                <VideoChatMessage />
+                <VideoBar />
               </div>
             </div>
           </div>
+          <Gradient />
         </div>
       </div>
     </Section>

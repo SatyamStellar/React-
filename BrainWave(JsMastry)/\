@@ -1,0 +1,27 @@
+import { pricing } from "../constants"
+import Button from "./Button"
+
+const PricingList = () => {
+  return (
+    <div className="flex max-lg:flex-wrap gap-[1rem]">
+      {pricing.map((item) => (
+        <div key={item.id} className="w-[19rem] max-lg:w-full h-full px-6 bg-n-8 border border-n-6 rounded-[2rem] lg:w-auto even:p-14 odd:p-8">
+          <h4 className="h4 mb-4" >{item.title}</h4>
+          <p >{item.description}</p>
+          <div>
+            {item.price && (
+              <>
+                <div>$</div>
+                <div>{item.price}</div>
+              </>
+            )}
+          </div>
+          <Button >
+          </Button>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+export default PricingList
