@@ -16,3 +16,4 @@ export const Heading = ({ className, title, text, tag }) => {
   )
 }
 
+
