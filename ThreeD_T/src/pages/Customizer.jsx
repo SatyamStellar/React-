@@ -33,12 +33,52 @@ const Customizer = () => {
         return <FilePicker
           file={file}
           setFile={setFile}
+          readFile={readFile}
         />
-      case "aipiker":
+      case "aipicker":
         return <AIPicker />
       default:
         return null;
     }
+  }
+
+  const handleDecals = (types, result) => {
+    const decalTypes = DecalTypes[types]
+
+    state[decalTypes.stateProperty] = result;
+
+    if (!activeFilterTab[decalTypes.filterTab]) {
+      handleActiveFilterTab(decalTypes.filterTab)
+    }
+  }
+
+  const handleActiveFilterTab = (tabName) => {
+    switch (tabName) {
+      case "logoShirt":
+        state.isLogoTexture = !activeFilterTab[tabName];
+        break;
+      case "stylishShirt":
+        state.isFullTexture = !activeFilterTab[tabName];
+        break;
+      default:
+        state.isLogoTexture = true;
+        state.isFullTexture = false;
+        break;
+    }
+    setActiveFilterTab((prevState) => {
+      return {
+        ...prevState,
+        [tabName]: !prevState[tabName]
+      }
+    })
+  }
+
+  const readFile = (types) => {
+    reader(file)
+      .then((result) => {
+        handleDecals(types, result);
+        setActiveEditorTab("");
+      })
   }
 
   return (
@@ -47,7 +87,7 @@ const Customizer = () => {
         <>
           <motion.div
             key="custom"
-            className="top-0 left-0 absolute z-10"
+            className="absolute top-0 left-0 z-10"
             {...slideAnimation('left')}
           >
             <div className="flex items-center min-h-screen">
@@ -59,10 +99,12 @@ const Customizer = () => {
                     handleClick={() => setActiveEditorTab(tab.name)}
                   />
                 ))}
+
                 {generateTabContent()}
               </div>
             </div>
           </motion.div>
+
           <motion.div
             className="absolute z-10 top-5 right-5"
             {...fadeAnimation}
@@ -71,29 +113,27 @@ const Customizer = () => {
               type="filled"
               title="Go Back"
               handleClick={() => state.intro = true}
-              customStyle="w-fit px-4 py-2.5 font-bold text-sm"
+              customStyles="w-fit px-4 py-2.5 font-bold text-sm"
             />
           </motion.div>
+
           <motion.div
-            className="filtertabs-container"
-            {...slideAnimation('up')}
+            className='filtertabs-container'
+            {...slideAnimation("up")}
           >
             {FilterTabs.map((tab) => (
               <Tab
                 key={tab.name}
                 tab={tab}
                 isFilterTab
-                isAcitve=""
-                handleClick={() => { }}
+                isActiveTab={activeFilterTab[tab.name]}
+                handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}
-
           </motion.div>
-
         </>
       )}
-    </AnimatePresence>
-  )
+    </AnimatePresence>)
 }
 
 export default Customizer
