@@ -24,8 +24,8 @@ importers:
         specifier: ^8.9.5
         version: 8.9.5
       openai:
-        specifier: ^4.79.1
-        version: 4.79.1
+        specifier: ^4.80.0
+        version: 4.80.0
     devDependencies:
       nodemon:
         specifier: ^3.1.9
@@ -440,8 +440,8 @@ packages:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
 
-  openai@4.79.1:
-    resolution: {integrity: sha512-M7P5/PKnT/S/B5v0D64giC9mjyxFYkqlCuQFzR5hkdzMdqUuHf8T1gHhPGPF5oAvu4+PO3TvJv/qhZoS2bqAkw==}
+  openai@4.80.0:
+    resolution: {integrity: sha512-5TqdNQgjOMxo3CkCvtjzuSwuznO/o3q5aak0MTy6IjRvPtvVA1wAFGJU3eZT1JHzhs2wFb/xtDG0o6Y/2KGCfw==}
     hasBin: true
     peerDependencies:
       ws: ^8.18.0
@@ -1021,7 +1021,7 @@ snapshots:
     dependencies:
       ee-first: 1.1.1
 
-  openai@4.79.1:
+  openai@4.80.0:
     dependencies:
       '@types/node': 18.19.71
       '@types/node-fetch': 2.6.12
