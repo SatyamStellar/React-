@@ -1,7 +1,11 @@
 
+
 const AIPicker = () => {
   return (
-    <div>AIPicker</div>
+    <div className="aipicker-container text-center">
+      <h2>Comming Soon</h2>
+
+    </div >
   )
 }
 

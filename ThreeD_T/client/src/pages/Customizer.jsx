@@ -48,17 +48,38 @@ const Customizer = () => {
   }
 
   const handleSumbit = async (type) => {
-    if (!prompt) return alert("Please enter a promt")
+    if (!prompt) return alert("Please enter a prompt");
 
     try {
+      setGeneratingImg(true);
 
+      const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt,
+        }),
+      });
+
+      const data = await response.json();
+
+      // Validate the presence of the 'photo' property
+      if (data && data.photo) {
+        handleDecals(type, `data:image/png;base64,${data.photo}`);
+      } else {
+        console.error('Error: Photo data is missing from the response');
+        alert('Failed to generate the image. Please try again.');
+      }
     } catch (error) {
-      alert(error);
+      console.error('Error:', error);
+      alert('An error occurred while generating the image.');
     } finally {
-      generatingImg(false);
+      setGeneratingImg(false);
       setActiveEditorTab("");
     }
-  }
+  };
 
   const handleDecals = (types, result) => {
     const decalTypes = DecalTypes[types]

@@ -25,7 +25,7 @@ const CameraRig = ({ children }) => {
       else taragetPosition = [0, 0, 2];
     }
 
-    easing.damp3(state.camera.position, taragetPosition, 0.25, delta)
+    easing.damp3(state.camera.position, taragetPosition, 0.25, delta);
 
     easing.dampE(
       group.current.rotation,
