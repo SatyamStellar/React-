@@ -1,12 +1,22 @@
 import React from 'react'
-import Counter from './components/Counter'
+import Todo from './components/Todo'
+//import Counter from './components/Counter'
 
 const App = () => {
   return (
     <div className="w-dvw h-screen bg-zinc-900 text-white">
-      <Counter />
+      {/*<Counter />*/}
+      <Todo />
     </div>
   )
 }
 
 export default App
+
+
+
+
+
+
+
+
